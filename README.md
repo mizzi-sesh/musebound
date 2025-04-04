@@ -27,3 +27,14 @@ You can check out the [create-t3-app GitHub repository](https://github.com/t3-os
 ## How do I deploy this?
 
 Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+
+- [ ] Deploy (Vercel)
+- [ ] Scaffold Basic UI with mock data
+- [ ] Setup Database (vercel postgres)
+- [ ] Add Authentication (Clerk)
+- [ ] Routing/image page (parallel rout)
+- [ ] Error Management (w /Sentry)
+- [ ] Delete message (w/Server actions)
+- [ ] Analytics (posthog)
+- [ ] Ratelimiting (upstash) 
+- [ ] Create a basic "chat Room" between two mock players which can retain message history
