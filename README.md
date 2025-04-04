@@ -33,7 +33,7 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 - [x] Tidy up build process
 - [x] Setup Database (vercel postgres)
 - [x] Attach Database to the UI
-- [ ] Add Authentication (Clerk)
+- [x] Add Authentication (Clerk)
 - [ ] Routing/image page (parallel rout)
 - [ ] Error Management (w /Sentry)
 - [ ] Delete message (w/Server actions)
