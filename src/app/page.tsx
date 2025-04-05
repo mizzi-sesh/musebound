@@ -1,28 +1,29 @@
 
 
-import { SignedIn, SignedOut } from "@clerk/nextjs";
+// import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { headers } from "next/headers";
-import { db } from "~/server/db";
+// import { db } from "~/server/db";
 
 export const dynamic = "force-dynamic";
 
 
 async function Images(){
-	const images = await db.query.images.findMany({
-		orderBy:(model, {desc}) => desc(model.id)
-	}); 
+// 	const images = await db.query.images.findMany({
+// 		orderBy:(model, {desc}) => desc(model.id)
+// 	}); 
 
-	console.log(images);
+	// console.log(images);
 	
 	return (
 		<div className="flex flex-wrap gap-4">
-				{[...images, ...images, ...images, ...images].map((image, index) => (
+				{`Hello, this is a test commit to help isolate deployment issue.`}
+				{/* {[...images, ...images, ...images, ...images].map((image, index) => (
 					<div key={image.id + "-" + index} className="w-48"> 
 						<img src={image.url}/>
 						<div>{image.name}</div>
           </div> 
 				)) 
-      }
+      } */}
 			</div>
 	)
 }
@@ -36,12 +37,12 @@ export default async function HomePage() {
 
 	return (
 		<main className="">
-			<SignedOut>
+			{/* <SignedOut> */}
 				 <div className="w-full h-full text-2xl text-center">Please sign in above</div>
-			</SignedOut>
-			<SignedIn>
+			{/* </SignedOut> */}
+			{/* <SignedIn> */}
 				<Images/>
-			</SignedIn>
+			{/* </SignedIn> */}
 			
 		</main>
 	); 

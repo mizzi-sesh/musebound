@@ -1,6 +1,6 @@
 import "~/styles/globals.css";
 import "@uploadthing/react/styles.css";
-import { ClerkProvider } from "@clerk/nextjs";
+// import { ClerkProvider } from "@clerk/nextjs";
 
 import type { Metadata } from "next";
 import { Geist, Inter } from "next/font/google";
@@ -23,13 +23,13 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<ClerkProvider>
+		// <ClerkProvider>
 			<html lang="en">
 				<body className={`flex flex-col gap-4 font sans ${inter.variable}`}>
 					<TopNav/>
 					{children}
 				</body>
 			</html>
-		</ClerkProvider>
+		// </ClerkProvider>
 	);
 }
