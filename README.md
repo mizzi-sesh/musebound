@@ -37,7 +37,7 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 - [x] Add Image Upload
 - [x] "taint" (server-only)
 - [x] Use Next/Image component
-- [ ] Error Management (w /Sentry)
+- [x] Error Management (w /Sentry)
 - [ ] Routing/image page (parallel rout)
 - [ ] Delete message (w/Server actions)
 - [ ] Analytics (posthog)

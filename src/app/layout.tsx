@@ -22,9 +22,10 @@ const inter = Inter({
 
 
 
-export default function RootLayout({
-	children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout(props: {
+	children: React.ReactNode
+	modal: React.ReactNode;
+}){
 	return (
 		<ClerkProvider>
 			<html lang="en">
@@ -39,7 +40,9 @@ export default function RootLayout({
 				/>
 				<body className={`flex flex-col gap-4 font sans ${inter.variable}`}>
 					<TopNav/>
-					{children}
+					{props.children}
+					{props.modal}
+					<div id="modal-root" />
 				</body>
 			</html>
 		</ClerkProvider>
