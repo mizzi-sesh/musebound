@@ -23,7 +23,7 @@ const inter = Inter({
 
 
 export default function RootLayout(props: {
-	children: React.ReactNode
+	children: React.ReactNode;
 	modal: React.ReactNode;
 }){
 	return (
