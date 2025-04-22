@@ -8,6 +8,7 @@ import { Inter } from "next/font/google";
 import TopNav from "./_components/topnav";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
 	title: "Musebound",
@@ -45,6 +46,7 @@ export default function RootLayout(props: {
 					</div> 
 					{props.modal}
 					<div id="modal-root" />
+					<Toaster />
 				</body>
 			</html>
 		</ClerkProvider>
