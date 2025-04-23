@@ -40,8 +40,10 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 - [x] Error Management (w /Sentry)
 - [x] Routing/image page (parallel rout)
 - [x] Update upload button to be less cringe
-- [ ] ShadUIify (specifically toasts)
-- [ ] Delete message (w/Server actions)
+- [x] ShadUIify (specifically toasts)
 - [ ] Analytics (posthog)
+- [ ] Delete message (w/Server actions)
 - [ ] Ratelimiting (upstash) 
+
+
 - [ ] Create a basic "chat Room" between two mock players which can retain message history

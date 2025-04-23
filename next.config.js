@@ -8,20 +8,38 @@ import "./src/env.js";
 const coreConfig = {
     images: {
         remotePatterns: [
-            {hostname: "utfs.io" }
+            { hostname: "utfs.io" }
         ],
     },
     typescript: {
         ignoreBuildErrors: true,
     },
     eslint: {
-        ignoreDuringBuilds: true, 
-    }
+        ignoreDuringBuilds: true,
+    },
+    async rewrites() {
+        return [
+            {
+                source: "/ingest/static/:path*",
+                destination: "https://us-assets.i.posthog.com/static/:path*",
+            },
+            {
+                source: "/ingest/:path*",
+                destination: "https://us.i.posthog.com/:path*",
+            },
+            {
+                source: "/ingest/decide",
+                destination: "https://us.i.posthog.com/decide",
+            },
+        ];
+    },
+    // This is required to support PostHog trailing slash API requests
+    skipTrailingSlashRedirect: true,
 };
 
 import { withSentryConfig } from "@sentry/nextjs";
 
-const config = withSentryConfig(coreConfig,  {
+const config = withSentryConfig(coreConfig, {
     // For all available options, see:
     // https://www.npmjs.com/package/@sentry/webpack-plugin#options
 
@@ -51,7 +69,6 @@ const config = withSentryConfig(coreConfig,  {
     // https://docs.sentry.io/product/crons/
     // https://vercel.com/docs/cron-jobs
     automaticVercelMonitors: true,
-  });
+});
 
 export default config;
-
