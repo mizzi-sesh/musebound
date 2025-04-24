@@ -39,9 +39,9 @@ export default function RootLayout(props: { children: React.ReactNode; modal: Re
 						routerConfig={extractRouterConfig(ourFileRouter)}
 					/>
 					<body className={`font-sans ${inter.variable} dark`}>
-						<div className="grid h-screen grid-rows-[auto,1fr]">
+						<div className="grid h-screen grid-rows-[auto_1fr]">
 							<TopNav />
-							<main className="overflow-y-scroll">{props.children}</main>
+							<main className="overflow-y-scroll ">{props.children}</main>
 						</div>
 						{props.modal}
 						<div id="modal-root" />
