@@ -1,4 +1,9 @@
-# TODO:
+# Musebound
+(Goal): A modern, sleek roleplaying website prioritising safety, customisation and access where text-based roleplayers can connect to roleplay prompts of their interest. 
+
+## Project
+In it's current form, Musebound is only an image gallery application, as a test to ensure the various tools and frameworks are working together. Many basic features are working, and Musebound will continuously be updated to be a great text-based roleplaying hub.
+## TODO:
 
 - [x] Deploy (Vercel)
 - [x] Scaffold Basic UI with mock data
